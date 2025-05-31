@@ -1,0 +1,34 @@
+/* input.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply mx-auto max-w-[1200px] w-[calc(100%_-_40px)]
+}
+
+.btn-violet {
+    @apply bg-violet-400 hover:bg-white border border-violet-400 rounded-full py-3 px-[10px] flex items-center justify-between gap-[10px] font-bold text-[14px] text-white hover:text-violet-400
+}
+
+.btn-violet .icon {
+    @apply w-9 h-9 rounded-full shrink-0 flex items-center justify-center bg-white/[.25];
+}
+
+.btn-violet:hover .icon {
+    @apply bg-violet-400;
+}
+
+.dld {
+    color: rgba(255, 255, 255, 0.251);
+}
+
+.sec-title {
+    @apply font-raleway from-white text-5xl text-violet-400/[.75] leading-[110%];
+}
+
+.btn-gray {
+    @apply bg-[#E7E6EE] hover:bg-violet-400 flex items-center justify-center text-center rounded-full text-violet-400 hover:text-white font-raleway font-bold text-xl leading-[110%] p-[10px]
+}
