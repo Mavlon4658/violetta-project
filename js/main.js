@@ -47,3 +47,18 @@ bars.onclick = () => {
 menuClose.onclick = () => {
     menu.classList.add('hidden')
 }
+
+const eductaionMoreBtn = document.querySelector('.education-more-btn');
+const educationMoreText = document.querySelector('.education-more-text');
+
+eductaionMoreBtn.onclick = () => {
+    if (educationMoreText.classList.contains('hidden')) {
+        eductaionMoreBtn.querySelector('svg').classList.add('rotate-180')
+        educationMoreText.classList.remove('hidden');
+        educationMoreText.classList.add('flex');
+    } else {
+        eductaionMoreBtn.querySelector('svg').classList.remove('rotate-180')
+        educationMoreText.classList.add('hidden');
+        educationMoreText.classList.remove('flex');
+    }
+}
