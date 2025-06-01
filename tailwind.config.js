@@ -4,8 +4,8 @@ module.exports = {
     extend: {
       'screens': {
         // 'md': '787px',
-        // 'xl': '1279px',
-        // 'lg': '1023px',
+        'xl': '1200px',
+        'lg': '950px',
       },
       colors: {
         // 'black': '#080808',

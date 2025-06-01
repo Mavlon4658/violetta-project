@@ -7,18 +7,17 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Normalize CSS -->
     <!-- Syle CSS -->
     <link rel="stylesheet" href="./css/output.css">
 </head>
 <body class="bg-white font-inter text-[14px] font-normal text-violet-400">
     
-    <div class="wrapper">
+    <div class="w-full min-h-screen overflow-hidden">
 
         <!-- Header -->
-        <header class="border-b border-violet-5=400/[.25] py-5">
-            <div class="container flex items-center justify-between pl-[102px]">
-                <ul class="flex items-center gap-[76.5px]">
+        <header class="lg:border-b xl:border-violet-5=400/[.25] pt-[10px] pb-5 lg:py-5">
+            <div class="container flex items-center justify-between xl:pl-[102px]">
+                <ul class="hidden lg:flex items-center gap-10 xl:gap-[76.5px]">
                     <li>
                         <a href="#" class="text-[14px] font-bold text-violet-400 hover:text-violet-400/[.75]">Обо мне</a>
                     </li>
@@ -39,20 +38,73 @@
                     <span class="icon">
                         <img src="./assets/icons/telegram-white.svg" alt="">
                     </span>
-                    <span>Написать в Телеграм</span>
+                    <span class="!hidden lg:!block">Написать в Телеграм</span>
                 </a>
+                <button class="header-bars flex lg:hidden w-[60px] h-[60px] items-center justify-center rounded-full border border-violet-400">
+                    <img src="./assets/icons/bars.svg" alt="">
+                </button>
             </div>
         </header>
         <!-- Header end -->
+
+        <!-- Menu -->
+        <section class="menu hidden lg:hidden fixed z-[3] top-0 left-0 w-full rounded-[0_0_30px_30px] bg-white/[.9] backdrop-blur-[5px]">
+            <div class="container pt-[10px] pb-5">
+                <div class="flex items-center justify-between mb-10">
+                    <h2 class="font-raleway font-medium text-4xl leading-[110%]">Меню</h2>
+                    <button class="menu-close flex items-center justify-center w-[60px] h-[60px] rounded-full border border-violet-400">
+                        <img src="./assets/icons/times.svg" alt="">
+                    </button>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#" class="w-full flex items-center justify-between font-raleway font-bold text-xl leading-[110%]">
+                            <span>Обо мне</span>
+                            <img src="./assets/icons/arrow-up.svg" alt="" class="rotate-90 w-[17px] shrink-0">
+                        </a>
+                    </li>
+                    <li class="h-[1px] bg-violet-400/[.25] my-5"></li>
+                    <li>
+                        <a href="#" class="w-full flex items-center justify-between font-raleway font-bold text-xl leading-[110%]">
+                            <span>Чем могу помочь</span>
+                            <img src="./assets/icons/arrow-up.svg" alt="" class="rotate-90 w-[17px] shrink-0">
+                        </a>
+                    </li>
+                    <li class="h-[1px] bg-violet-400/[.25] my-5"></li>
+                    <li>
+                        <a href="#" class="w-full flex items-center justify-between font-raleway font-bold text-xl leading-[110%]">
+                            <span>Методы и форматы</span>
+                            <img src="./assets/icons/arrow-up.svg" alt="" class="rotate-90 w-[17px] shrink-0">
+                        </a>
+                    </li>
+                    <li class="h-[1px] bg-violet-400/[.25] my-5"></li>
+                    <li>
+                        <a href="#" class="w-full flex items-center justify-between font-raleway font-bold text-xl leading-[110%]">
+                            <span>Компетенции</span>
+                            <img src="./assets/icons/arrow-up.svg" alt="" class="rotate-90 w-[17px] shrink-0">
+                        </a>
+                    </li>
+                    <li class="h-[1px] bg-violet-400/[.25] my-5"></li>
+                    <li>
+                        <a href="#" class="w-full flex items-center justify-between font-raleway font-bold text-xl leading-[110%]">
+                            <span>Контакты</span>
+                            <img src="./assets/icons/arrow-up.svg" alt="" class="rotate-90 w-[17px] shrink-0">
+                        </a>
+                    </li>
+                    <li class="h-[1px] bg-violet-400/[.25] my-5"></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Menu end -->
     
         <main>
 
             <!-- Home -->
             <section>
-                <div class="container flex items-end justify-between py-[100px]">
-                    <div class="flex flex-col justify-between min-h-[574px] max-w-[488px] w-full">
-                        <div class="flex flex-col gap-10">
-                            <h1 class="text-violet-400 font-raleway font-medium text-7xl">Виолетта Кузнецова</h1>
+                <div class="container flex flex-col-reverse lg:flex-row items-center lg:items-end justify-between gap-5 pb-10 lg:py-[100px]">
+                    <div class="flex flex-col justify-between gap-10 lg:min-h-[574px] lg:max-w-[488px] w-full">
+                        <div class="flex flex-col gap-5 lg:gap-10">
+                            <h1 class="text-violet-400 font-raleway font-medium text-5xl lg:text-7xl uppercase">Виолетта Кузнецова</h1>
                             <ul class="flex items-center flex-wrap gap-[10px]">
                                 <li class="flex items-center gap-[5px] border border-violet-400 rounded-full font-bold py-1 px-[9px]">
                                     <img src="./assets/icons/star.svg" alt="">
@@ -76,9 +128,11 @@
                             </span>
                         </a>
                     </div>
-                    <div class="max-w-[590px] w-full h-[566px] relative z-[1] bg-violet-400 rounded-[30px]">
-                        <img src="./assets/images/home-bg.png" alt="" class="absolute z-[-1] bottom-0 left-0 w-full h-full">
-                        <img src="./assets/images/home-card.png" alt="" class="absolute z-[-1] bottom-0 left-0 w-full">
+                    <div class="max-w-[350px] lg:max-w-[590px] w-full h-[336px] lg:h-[566px] relative z-[1] bg-violet-400 rounded-[30px]">
+                        <img src="./assets/images/home-bg.png" alt="" class="absolute z-[-1] bottom-0 left-0 w-full h-full hidden lg:block">
+                        <img src="./assets/images/home-bg-mb.png" alt="" class="absolute z-[-1] bottom-0 left-0 w-full h-full lg:hidden">
+                        <img src="./assets/images/home-card.png" alt="" class="absolute z-[-1] bottom-0 left-0 w-full hidden lg:block">
+                        <img src="./assets/images/home-card-mb.png" alt="" class="absolute z-[-1] bottom-[0px] left-0 w-full lg:hidden">
                     </div>
                 </div>
             </section>
@@ -86,14 +140,14 @@
 
             <!-- Help -->
             <section>
-                <div class="container py-[100px]">
-                    <h2 class="font-raleway from-white text-[100px] leading-[110%] text-violet-400/[.75] text-center -mb-[25px]">Чем могу помочь</h2>
-                    <div class="grid grid-cols-3 gap-[10px] bg-violet-400 rounded-[35px] p-[10px] relative">
+                <div class="container py-10 lg:py-[100px]">
+                    <h2 class="font-raleway from-white text-4xl lg:text-[100px] leading-[110%] text-violet-400/[.75] lg:text-center mb-10 lg:-mb-[25px]">Чем могу помочь</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-[10px] bg-violet-400 rounded-[35px] p-[10px] relative">
                         <div class="bg-[#F7F6F9] rounded-[30px] flex flex-col items-center p-5 pt-[30px]">
                             <div class="w-20 h-20 grid place-items-center border border-violet-400/[.25] rounded-full">
                                 <img src="./assets/icons/help-card-icon-1.svg" alt="">
                             </div>
-                            <h3 class="text-center font-raleway text-2xl leading-[110%] font-bold w-full max-w-[306px] mt-5 mb-[33px]">Ментальные расстройства у взрослых</h3>
+                            <h3 class="text-center font-raleway text-xl lg:text-2xl leading-[110%] font-bold w-full max-w-[257px] lg:max-w-[306px] mt-5 mb-[33px]">Ментальные расстройства у взрослых</h3>
                             <ul class="w-full flex flex-col gap-[10px] text-black/[.5]">
                                 <li class="flex items-center gap-[10px]">
                                     <img src="./assets/icons/help-card-text-icon.svg" alt="" class="shrink-0">
@@ -141,7 +195,7 @@
                             <div class="w-20 h-20 grid place-items-center border border-violet-400/[.25] rounded-full">
                                 <img src="./assets/icons/help-card-icon-2.svg" alt="">
                             </div>
-                            <h3 class="text-center font-raleway text-2xl leading-[110%] font-bold w-full max-w-[306px] mt-5 mb-[33px]">Проблемы в отношениях с другими людьми</h3>
+                            <h3 class="text-center font-raleway text-xl lg:text-2xl leading-[110%] font-bold w-full max-w-[257px] lg:max-w-[306px] mt-5 mb-[33px]">Проблемы в отношениях с другими людьми</h3>
                             <ul class="w-full flex flex-col gap-[10px] text-black/[.5]">
                                 <li class="flex items-center gap-[10px]">
                                     <img src="./assets/icons/help-card-text-icon.svg" alt="" class="shrink-0">
@@ -165,7 +219,7 @@
                             <div class="w-20 h-20 grid place-items-center border border-violet-400/[.25] rounded-full">
                                 <img src="./assets/icons/help-card-icon-3.svg" alt="">
                             </div>
-                            <h3 class="text-center font-raleway text-2xl leading-[110%] font-bold w-full max-w-[257px] mt-5 mb-[33px]">Личностные проблемы</h3>
+                            <h3 class="text-center font-raleway text-xl lg:text-2xl leading-[110%] font-bold w-full max-w-[257px] lg:max-w-[306px] mt-5 mb-[33px]">Личностные проблемы</h3>
                             <ul class="w-full flex flex-col gap-[10px] text-black/[.5]">
                                 <li class="flex items-center gap-[10px]">
                                     <img src="./assets/icons/help-card-text-icon.svg" alt="" class="shrink-0">
@@ -185,7 +239,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <img src="./assets/icons/help-cards-icon.svg" alt="" class="absolute right-[110px] bottom-0">
+                        <img src="./assets/icons/help-cards-icon.svg" alt="" class="absolute right-[110px] bottom-0 hidden lg:block">
                     </div>
                 </div>
             </section>
@@ -193,9 +247,9 @@
 
             <!-- Skills -->
             <section>
-                <div class="container py-[100px]">
+                <div class="container py-10 lg:py-[100px]">
                     <h2 class="sec-title mb-10">Проверенные методы, дающие результат</h2>
-                    <div class="bg-violet-400/[.15] rounded-[30px] p-5 grid grid-cols-3 gap-5">
+                    <div class="bg-violet-400/[.15] rounded-[30px] p-[10px] pt-5 pb-[27px] lg:p-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px] lg:gap-5">
                         <div class="flex flex-col items-center gap-[5px] relative z-[1]">
                             <div class="absolute -top-3 left-0 z-[-1] font-raleway text-[52px] font-medium leading-[57px] text-violet-400/[.25]">01</div>
                             <h3 class="text-violet-400/[.75] shrink-0 font-raleway font-bold text-2xl leading-[26px]">КПТ</h3>
@@ -251,36 +305,36 @@
 
             <!-- Work -->
             <section>
-                <div class="container py-[100px] grid grid-cols-2 gap-5 items-end">
-                    <div class="relative">
-                        <h3 class="sec-title max-w-[413px] mb-[39px] relative z-[1]">Удобный формат работы</h3>
-                        <ul class="max-w-[413px] grid grid-cols-1 gap-[10px] mb-[62px]">
-                            <li class="bg-violet-400 h-[150px] rounded-[20px] flex items-center px-[48.5px]">
-                                <a href="#" class="flex flex-col gap-[10px] items-center justify-center relative z-[1] text-white font-bold w-[146px]">
+                <div class="container py-10 lg:py-[100px] grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-5 items-end">
+                    <div class="relative flex lg:block flex-col">
+                        <h3 class="order-2 sec-title max-w-[413px] mb-10 lg:mb-[39px] relative z-[1]">Удобный формат работы</h3>
+                        <ul class="order-3 lg:max-w-[413px] grid grid-cols-2 lg:grid-cols-1 gap-[10px] lg:mb-[62px]">
+                            <li class="bg-violet-400 h-[173px] lg:h-[150px] rounded-[20px] flex items-center justify-center lg:justify-start lg:px-[48.5px]">
+                                <a href="#" class="flex flex-col gap-[10px] items-center justify-center relative z-[1] text-white font-bold text-center w-[146px]">
                                     <span class="w-9 h-9 rounded-full flex items-center justify-center bg-white/[.25]">
                                         <img src="./assets/icons/google-meet.svg" alt="">
                                     </span>
                                     <span>Google Meet</span>
                                 </a>
                             </li>
-                            <li class="bg-violet-400 h-[150px] rounded-[20px] flex items-center px-[48.5px]">
-                                <a href="#" class="flex flex-col gap-[10px] items-center justify-center relative z-[1] text-white font-bold w-[146px]">
+                            <li class="bg-violet-400 h-[173px] lg:h-[150px] rounded-[20px] flex items-center justify-center lg:justify-start lg:px-[48.5px]">
+                                <a href="#" class="flex flex-col gap-[10px] items-center justify-center relative z-[1] text-white font-bold text-center w-[146px]">
                                     <span class="w-9 h-9 rounded-full flex items-center justify-center bg-white/[.25]">
-                                        <img src="./assets/icons/google-meet.svg" alt="">
+                                        <img src="./assets/icons/telegram-white.svg" alt="">
                                     </span>
-                                    <span>Google Meet</span>
+                                    <span>Телеграм</span>
                                 </a>
                             </li>
                         </ul>
-                        <img src="./assets/images/work-card.png" alt="" class="absolute right-[7px] bottom-[3px]">
-                        <a href="#" class="btn-gray relative z-[2]">Онлайн-констультации</a>
+                        <img src="./assets/images/work-card.png" alt="" class="absolute translate-x-1/2 lg:translate-x-0 right-1/2 lg:right-[7px] -bottom-[140px] lg:bottom-[3px] w-[281px] lg:w-auto">
+                        <a href="#" class="order-2 btn-gray relative z-[2] mb-[10px] lg:mb-0">Онлайн-констультации</a>
                     </div>
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col-reverse lg:flex-col gap-5 relative">
                         <p class="flex items-center gap-5 text-violet-400">
                             <img src="./assets/icons/location-icon.svg" alt="" class="shrink-0">
                             <span>Санкт‑Петербург (метро Сенная площадь, Спасская, Садовая)</span>
                         </p>
-                        <iframe class="w-full h-[352px] rounded-[30px]" src="https://yandex.ru/map-widget/v1/?um=constructor%3Addfffa4312ad106da610baa67a8dfd073f7b094a17c2a2f6254c7df6b5896154&amp;source=constructor" frameborder="0"></iframe>
+                        <iframe class="w-full h-[177px] lg:h-[352px] rounded-[30px]" src="https://yandex.ru/map-widget/v1/?um=constructor%3Addfffa4312ad106da610baa67a8dfd073f7b094a17c2a2f6254c7df6b5896154&amp;source=constructor" frameborder="0"></iframe>
                         <a href="#" class="btn-gray">Очные констультации</a>
                     </div>
                 </div>
@@ -289,14 +343,14 @@
 
             <!-- Education -->
             <section>
-                <div class="container py-[100px]">
-                    <div class="max-w-[896px] ms-auto mr-0 flex flex-col gap-20">
+                <div class="container py-10 lg:py-[100px]">
+                    <div class="max-w-[896px] ms-auto mr-0 flex flex-col gap-10 lg:gap-20">
                         <div>
-                            <div class="flex items-center">
-                                <h2 class="sec-title me-[13px]">Образование</h2>
-                                <div class="w-[250px] h-[60px] flex items-center justify-center font-raleway font-bold text-xl leading-[110%] text-violet-400/[.75] text-center border border-violet-400/[.75] rounded-full">Основное</div>
+                            <div class="flex items-start lg:items-center flex-col lg:flex-row gap-[13px] lg:gap-0">
+                                <h2 class="sec-title lg:me-[13px]">Образование</h2>
+                                <div class="w-full lg:w-[250px] h-[33px] lg:h-[60px] flex items-center justify-center font-raleway font-bold text-xs lg:text-xl leading-[110%] text-violet-400/[.75] text-center border border-violet-400/[.75] rounded-full">Основное</div>
                             </div>
-                            <div class="flex flex-col gap-[26px] mt-10">
+                            <div class="flex flex-col gap-[26px] mt-5 lg:mt-10">
                                 <div class="h-[1px] w-full bg-violet-400"></div>
                                 <div class="w-full">
                                     <h3 class="font-raleway font-medium text-[52px] leading-[110%] mb-[7px] flex items-center justify-between">
@@ -305,7 +359,7 @@
                                             <img src="./assets/icons/arrow-up.svg" alt="">
                                         </a>
                                     </h3>
-                                    <ul class="flex flex-col gap-5 text-base leading-[110%]">
+                                    <ul class="flex flex-col gap-5 text-sm lg:text-base leading-[110%]">
                                         <li>Институт психотерапии и медицинской психологии им. Б. Д. Карвасарского — психолог, преподаватель психологии</li>
                                         <li>Институт психотерапии и медицинской психологии им. Б. Д. Карвасарского — врач‑психотерапевт, КПТ (2021‑2022)</li>
                                         <li>Санкт‑Петербургский государственный университет — врач‑психиатр (2020‑2022)</li>
@@ -319,7 +373,7 @@
                                             <img src="./assets/icons/arrow-up.svg" alt="">
                                         </a>
                                     </h3>
-                                    <ul class="flex flex-col gap-5 text-base leading-[110%]">
+                                    <ul class="flex flex-col gap-5 text-sm lg:text-base leading-[110%]">
                                         <li>Приволжский Исследовательский Медицинский Университет, лечебный факультет — врач‑лечебник (2017‑2020)</li>
                                     </ul>
                                 </div>
@@ -331,7 +385,7 @@
                                             <img src="./assets/icons/arrow-up.svg" alt="">
                                         </a>
                                     </h3>
-                                    <ul class="flex flex-col gap-5 text-base leading-[110%]">
+                                    <ul class="flex flex-col gap-5 text-sm lg:text-base leading-[110%]">
                                         <li>Нижегородская Государственная Медицинская Академия, последипломное образование — врач по общей гигиене (2015‑2016)</li>
                                     </ul>
                                 </div>
@@ -343,7 +397,7 @@
                                             <img src="./assets/icons/arrow-up.svg" alt="">
                                         </a>
                                     </h3>
-                                    <ul class="flex flex-col gap-5 text-base leading-[110%]">
+                                    <ul class="flex flex-col gap-5 text-sm lg:text-base leading-[110%]">
                                         <li>Нижегородская Государственная Медицинская Академия, медико‑профилактический <br> факультет — врач</li>
                                     </ul>
                                 </div>
@@ -352,9 +406,9 @@
                         </div>
                         <div>
                             <div class="flex items-center">
-                                <h2 class="sec-title me-[13px]">Образование</h2>
-                                <div class="w-[250px] h-[60px] flex items-center justify-center font-raleway font-bold text-xl leading-[110%] text-violet-400/[.75] text-center border border-violet-400/[.75] rounded-full">Дополнительное</div>
-                                <a href="#" class="border border-violet-400/[.75] w-[60px] h-[60px] flex items-center justify-center rounded-full ml-[10px]">
+                                <h2 class="hidden lg:block sec-title me-[13px]">Образование</h2>
+                                <div class="w-full lg:w-[250px] h-[33px] lg:h-[60px] flex items-center justify-center font-raleway font-bold text-xs lg:text-xl leading-[110%] text-violet-400/[.75] text-center border border-violet-400/[.75] rounded-full">Дополнительное</div>
+                                <a href="#" class="shrink-0 border border-violet-400/[.75] w-[33px] lg:w-[60px] h-[33px] lg:h-[60px] flex items-center justify-center rounded-full ml-1 lg:ml-[10px]">
                                     <img src="./assets/icons/arrow-down.svg" alt="">
                                 </a>
                             </div>
@@ -366,46 +420,47 @@
 
             <!-- Experience -->
             <section>
-                <div class="container py-[100px]">
-                    <h2 class="text-center font-raleway font-medium text-[100px] leading-[100%] text-violet-400/[0.75] mb-5">Опыт работы</h2>
-                    <div class="grid grid-cols-2 gap-5">
-                        <div class="bg-violet-400 rounded-[30px] relative z-[1]">
+                <div class="container py-10 lg:py-[100px]">
+                    <h2 class="text-center font-raleway font-medium text-[40px] lg:text-[100px] leading-[100%] text-violet-400/[0.75] mb-6 lg:mb-5">Опыт работы</h2>
+                    <div class="flex lg:grid flex-col lg:grid-cols-2 gap-10 lg:gap-5 items-center lg:items-stretch">
+                        <div class="bg-violet-400 rounded-[30px] relative z-[1] w-full max-w-[350px] lg:w-auto h-[279px] lg:h-auto">
                             <img src="./assets/icons/box-bg-1.png" alt="" class="absolute top-0 left-0 w-full h-full z-[-1] object-cover rounded-[30px]">
-                            <img src="./assets/images/experience-card.png" alt="" class="absolute left-0 bottom-0 w-full">
+                            <img src="./assets/images/experience-card.png" alt="" class="absolute left-0 bottom-0 w-full hidden lg:hidden">
+                            <img src="./assets/images/experience-card-mb.png" alt="" class="absolute left-0 bottom-0 w-full lg:hidden">
                         </div>
                         <ul class="flex flex-col gap-10">
                             <li class="w-full bg-violet-400 rounded-[0_15px_15px_15px] pe-5">
-                                <div class="flex items-center gap-10">
-                                    <h3 class="shrink-0 relative z-[1] pe-5 pb-[10px] ps-[10px] bg-white font-raleway font-medium text-4xl leading-[110%] rounded-br-[15px]">
+                                <div class="flex items-center gap-[30px] lg:gap-10">
+                                    <h3 class="shrink-0 relative z-[1] pe-5 pb-[10px] ps-[10px] bg-white font-raleway font-medium text-2xl lg:text-4xl leading-[110%] rounded-br-[15px]">
                                         <span>2020 - 2022</span>
                                         <img src="./assets/icons/corner-icon.svg" alt="" class="absolute top-0 right-0 translate-x-full z-[-1]">
                                         <img src="./assets/icons/corner-icon.svg" alt="" class="absolute bottom-0 left-0 translate-y-full z-[-1]">
                                     </h3>
-                                    <div class="w-full h-[18px] bg-white rounded-full"></div>
+                                    <div class="w-full h-[13px] lg:h-[18px] bg-white rounded-full"></div>
                                 </div>
-                                <p class="text-white/[.75] ml-[20px] px-[38px] py-[30px] text-center font-raleway font-bold text-xl leading-[110%]">Клинический ординатор кафедры психиатрии и наркологии СПбГУ</p>
+                                <p class="text-white/[.75] lg:ml-[20px] px-[34px] lg:px-[38px] py-5 lg:py-[30px] text-center font-raleway font-bold text-sm lg:text-xl leading-[110%]">Клинический ординатор кафедры психиатрии и наркологии СПбГУ</p>
                             </li>
                             <li class="w-full bg-violet-400 rounded-[0_15px_15px_15px] pe-5">
-                                <div class="flex items-center gap-10">
-                                    <h3 class="shrink-0 relative z-[1] pe-5 pb-[10px] ps-[10px] bg-white font-raleway font-medium text-4xl leading-[110%] rounded-br-[15px]">
+                                <div class="flex items-center gap-[30px] lg:gap-10">
+                                    <h3 class="shrink-0 relative z-[1] pe-5 pb-[10px] ps-[10px] bg-white font-raleway font-medium text-2xl lg:text-4xl leading-[110%] rounded-br-[15px]">
                                         <span>c 2022</span>
                                         <img src="./assets/icons/corner-icon.svg" alt="" class="absolute top-0 right-0 translate-x-full z-[-1]">
                                         <img src="./assets/icons/corner-icon.svg" alt="" class="absolute bottom-0 left-0 translate-y-full z-[-1]">
                                     </h3>
-                                    <div class="w-full h-[18px] bg-white rounded-full"></div>
+                                    <div class="w-full h-[13px] lg:h-[18px] bg-white rounded-full"></div>
                                 </div>
-                                <p class="text-white/[.75] ml-[20px] px-[38px] py-[30px] text-center font-raleway font-bold text-xl leading-[110%]">Врач‑психиатр дневного стационара ПБ №1 им. П. П. Кащенко</p>
+                                <p class="text-white/[.75] lg:ml-[20px] px-[34px] lg:px-[38px] py-5 lg:py-[30px] text-center font-raleway font-bold text-sm lg:text-xl leading-[110%]">Врач‑психиатр дневного стационара ПБ №1 им. П. П. Кащенко</p>
                             </li>
                             <li class="w-full bg-violet-400 rounded-[0_15px_15px_15px] pe-5">
-                                <div class="flex items-center gap-10">
-                                    <h3 class="shrink-0 relative z-[1] pe-5 pb-[10px] ps-[10px] bg-white font-raleway font-medium text-4xl leading-[110%] rounded-br-[15px]">
+                                <div class="flex items-center gap-[30px] lg:gap-10">
+                                    <h3 class="shrink-0 relative z-[1] pe-5 pb-[10px] ps-[10px] bg-white font-raleway font-medium text-2xl lg:text-4xl leading-[110%] rounded-br-[15px]">
                                         <span>c 2023</span>
                                         <img src="./assets/icons/corner-icon.svg" alt="" class="absolute top-0 right-0 translate-x-full z-[-1]">
                                         <img src="./assets/icons/corner-icon.svg" alt="" class="absolute bottom-0 left-0 translate-y-full z-[-1]">
                                     </h3>
-                                    <div class="w-full h-[18px] bg-white rounded-full"></div>
+                                    <div class="w-full h-[13px] lg:h-[18px] bg-white rounded-full"></div>
                                 </div>
-                                <p class="text-white/[.75] ml-[20px] px-[38px] py-[30px] text-center font-raleway font-bold text-xl leading-[110%]">Врач‑психотерапевт клиники «Эпиона» и ПБ №1 им. П. П. Кащенко</p>
+                                <p class="text-white/[.75] lg:ml-[20px] px-[34px] lg:px-[38px] py-5 lg:py-[30px] text-center font-raleway font-bold text-sm lg:text-xl leading-[110%]">Врач‑психотерапевт клиники «Эпиона» и ПБ №1 им. П. П. Кащенко</p>
                             </li>
                         </ul>
                     </div>
@@ -415,20 +470,20 @@
 
             <!-- Profession -->
             <section>
-                <div class="container py-[100px]">
-                    <h2 class="text-violet-400/[.75] font-raleway font-medium text-5xl leading-[110%] max-w-[731px] mb-10">Членство в профессиональных организациях</h2>
-                    <ul class="grid grid-cols-2 gap-5">
-                        <li class="bg-violet-400/[.25] rounded-full flex items-center p-[22px] gap-5">
+                <div class="container py-10 lg:py-[100px]">
+                    <h2 class="text-violet-400/[.75] font-raleway font-medium text-4xl lg:text-5xl leading-[110%] max-w-[731px] mb-10">Членство в профессиональных организациях</h2>
+                    <ul class="grid grid-cols-1 lg:grid-cols-2 gap-[10px] lg:gap-5">
+                        <li class="bg-violet-400/[.25] rounded-full flex items-center p-[5px] lg:p-[22px] gap-[10px] lg:gap-5">
                             <div class="w-[56px] h-[56px] shrink-0 flex items-center justify-center rounded-full bg-white/[.25]">
                                 <img src="./assets/icons/profession-icon-1.svg" alt="">
                             </div>
-                            <p class="font-raleway font-bold text-xl leading-[110%] text-violet-400">Российское общество психиатров</p>
+                            <p class="font-raleway font-bold text-xs lg:text-xl leading-[110%] text-violet-400">Российское общество психиатров</p>
                         </li>
-                        <li class="bg-violet-400/[.25] rounded-full flex items-center p-[22px] gap-5">
+                        <li class="bg-violet-400/[.25] rounded-full flex items-center p-[5px] lg:p-[22px] gap-[10px] lg:gap-5">
                             <div class="w-[56px] h-[56px] shrink-0 flex items-center justify-center rounded-full bg-white/[.25]">
                                 <img src="./assets/icons/profession-icon-2.svg" alt="">
                             </div>
-                            <p class="font-raleway font-bold text-xl leading-[110%] text-violet-400">Ассоциация когнитивно‑поведенческой психотерапии</p>
+                            <p class="font-raleway font-bold text-xs lg:text-xl leading-[110%] text-violet-400">Ассоциация когнитивно‑поведенческой психотерапии</p>
                         </li>
                     </ul>
                 </div>
@@ -437,9 +492,9 @@
 
             <!-- FAQ -->
             <section>
-                <div class="container py-[100px]">
+                <div class="container py-10 lg:py-[100px]">
                     <h2 class="sec-title mb-10">Частозадаваемые вопросы</h2>
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
                         <div class="flex flex-col gap-5">
                             <div class="w-full h-[1px] bg-violet-400"></div>
                             <div class="accordion">
@@ -506,7 +561,7 @@
                                     <div class="accordion-body__text">Психолог – специалист без медицинского образования, который помогает справиться с психологическими трудностями с помощью беседы и не может назначать медикаменты. Психотерапевт и психиатр – это врачи: психотерапевт лечит психические проблемы психотерапетическими методами (при необходимости дополняя лечением препаратами), а психиатр специализируется на диагностике и медикаментозном лечении психических расстройств.</div>
                                 </div>
                             </div>
-                            <div class="w-full h-[1px] bg-violet-400"></div>
+                            <div class="w-full h-[1px] bg-violet-400 hidden lg:block"></div>
                         </div>
                         <div class="flex flex-col gap-5">
                             <div class="w-full h-[1px] bg-violet-400"></div>
@@ -583,21 +638,21 @@
 
             <!-- Contact -->
             <section>
-                <div class="container pt-[100px] pb-10 flex items-end justify-between">
+                <div class="container pt-10 lg:pt-[100px] pb-[25px] lg:pb-10 flex items-start lg:items-end justify-between flex-col lg:flex-row gap-[25px] lg:gap-10">
                     <h2 class="sec-title">Контакты</h2>
-                    <div class="pr-[100px] flex items-end gap-[120px]">
+                    <div class="lg:pr-[100px] w-full lg:w-auto flex items-end justify-between lg:justify-start lg:gap-[100px] xl:gap-[120px]">
                         <div>
-                            <p class="text-base text-black/[.5] mb-[9px]">Telegram:</p>
+                            <p class="text-sm lg:text-base text-black/[.5] mb-[9px]">Telegram:</p>
                             <a href="#" class="flex items-end gap-5">
-                                <span class="font-raleway font-medium text-4xl leading-[110%] text-violet-400/[.75]">@Dr_Viola_Psy</span>
-                                <img src="./assets/icons/arrow-up.svg" alt="" class="w-4 shrink-0">
+                                <span class="font-raleway font-medium text-xl lg:text-4xl leading-[110%] text-violet-400/[.75]">@Dr_Viola_Psy</span>
+                                <img src="./assets/icons/arrow-up.svg" alt="" class="w-4 shrink-0 hidden lg:block">
                             </a>
                         </div>
                         <div>
-                            <p class="text-base text-black/[.5] mb-[9px]">Отзывы:</p>
+                            <p class="text-sm lg:text-base text-black/[.5] mb-[9px]">Отзывы:</p>
                             <a href="#" class="flex items-end gap-5">
-                                <span class="font-raleway font-medium text-4xl leading-[110%] text-violet-400/[.75]">ПроДокторов</span>
-                                <img src="./assets/icons/arrow-up.svg" alt="" class="w-4 shrink-0">
+                                <span class="font-raleway font-medium text-xl lg:text-4xl leading-[110%] text-violet-400/[.75]">ПроДокторов</span>
+                                <img src="./assets/icons/arrow-up.svg" alt="" class="w-4 shrink-0 hidden lg:block">
                             </a>
                         </div>
                     </div>
@@ -608,25 +663,25 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-violet-400 rounded-[30px_30px_0_0] text-white">
-            <div class="container pt-10 pb-20">
-                <h2 class="text-center font-raleway font-medium text-[103px] leading-[110%] mb-[15px]">ВИОЛЕТТА КУЗНЕЦОВА</h2>
-                <ul class="flex items-center justify-center gap-[10px] mb-10">
-                    <li class="flex items-center gap-[5px] py-1 px-[6px] border border-white rounded-full font-bold">
+        <footer class="bg-violet-400 rounded-[20px_20px_0_0] lg:rounded-[30px_30px_0_0] text-white">
+            <div class="container pt-[10px] lg:pt-10 pb-5 lg:pb-20">
+                <h2 class="w-[calc(100%_+_40px)] -ml-5 text-center font-raleway font-medium text-[64px] lg:text-[103px] leading-[110%] mb-[15px]">ВИОЛЕТТА КУЗНЕЦОВА</h2>
+                <ul class="flex items-center justify-center gap-[5px] lg:gap-[10px] mb-10">
+                    <li class="flex items-center gap-[5px] py-1 px-[6px] border border-white rounded-full font-bold text-xs lg:text-sm">
                         <img src="./assets/icons/star-white.svg" alt="" class="w-[23px] shrink-0">
                         <span>Психиатр</span>
                     </li>
-                    <li class="flex items-center gap-[5px] py-1 px-[6px] border border-white rounded-full font-bold">
+                    <li class="flex items-center gap-[5px] py-1 px-[6px] border border-white rounded-full font-bold text-xs lg:text-sm">
                         <img src="./assets/icons/star-white.svg" alt="" class="w-[23px] shrink-0">
                         <span>Психолог</span>
                     </li>
-                    <li class="flex items-center gap-[5px] py-1 px-[6px] border border-white rounded-full font-bold">
+                    <li class="flex items-center gap-[5px] py-1 px-[6px] border border-white rounded-full font-bold text-xs lg:text-sm">
                         <img src="./assets/icons/star-white.svg" alt="" class="w-[23px] shrink-0">
                         <span>Психотерапевт</span>
                     </li>
                 </ul>
                 <div class="flex items-start justify-between">
-                    <div>
+                    <div class="hidden lg:block">
                         <a href="#" class="flex items-center gap-5 mb-5">
                             <img src="./assets/icons/location-white.svg" alt="">
                             <span class="max-w-[243px]">Санкт‑Петербург (метро Сенная площадь, Спасская, Садовая)</span>
@@ -638,9 +693,9 @@
                             <span>Написать в Телеграм</span>
                         </a>
                     </div>
-                    <div class="flex items-start gap-[100px]">
-                        <div>
-                            <h3 class="font-raleway font-medium text-3xl leading-[110%] mb-5 text-white/[.5]">Категория</h3>
+                    <div class="flex items-start gap-[100px] w-full lg:w-auto">
+                        <div class="w-1/2 lg:w-auto">
+                            <h3 class="font-raleway font-medium text-2xl lg:text-3xl leading-[110%] mb-5 text-white/[.5]">Категория</h3>
                             <ul class="flex flex-col gap-5 font-bold">
                                 <li>
                                     <a href="#">Обо мне</a>
@@ -659,8 +714,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h3 class="font-raleway font-medium text-3xl leading-[110%] mb-5 text-white/[.5]">Категория</h3>
+                        <div class="w-1/2 lg:w-auto">
+                            <h3 class="font-raleway font-medium text-2xl lg:text-3xl leading-[110%] mb-5 text-white/[.5]">Категория</h3>
                             <ul class="flex flex-col gap-5 font-bold">
                                 <li>
                                     <a href="#">Обо мне</a>
@@ -679,7 +734,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="hidden xl:block">
                             <h3 class="font-raleway font-medium text-3xl leading-[110%] mb-5 text-white/[.5]">Категория</h3>
                             <ul class="flex flex-col gap-5 font-bold">
                                 <li>

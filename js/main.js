@@ -35,3 +35,15 @@ accordions.forEach((item) => {
         }
     });
 });
+
+const bars = document.querySelector('.header-bars');
+const menu = document.querySelector('.menu');
+const menuClose = document.querySelector('.menu-close');
+
+bars.onclick = () => {
+    menu.classList.remove('hidden');
+}
+
+menuClose.onclick = () => {
+    menu.classList.add('hidden')
+}

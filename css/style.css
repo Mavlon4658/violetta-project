@@ -10,7 +10,7 @@
 }
 
 .btn-violet {
-    @apply bg-violet-400 hover:bg-white border border-violet-400 rounded-full py-3 px-[10px] flex items-center justify-between gap-[10px] font-bold text-[14px] text-white hover:text-violet-400
+    @apply bg-violet-400 hover:bg-white border border-violet-400 rounded-full py-3 px-3 lg:px-[10px] flex items-center justify-between gap-[10px] font-bold text-[14px] text-white hover:text-violet-400
 }
 
 .btn-violet .icon {
@@ -26,7 +26,7 @@
 }
 
 .sec-title {
-    @apply font-raleway from-white text-5xl text-violet-400/[.75] leading-[110%];
+    @apply font-raleway from-white text-[40px] lg:text-5xl text-violet-400/[.75] leading-[110%];
 }
 
 .btn-gray {
