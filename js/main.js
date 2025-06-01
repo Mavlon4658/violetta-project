@@ -15,3 +15,23 @@ if (phoneInp.length) {
         })
     });
 }
+
+const accordions = document.querySelectorAll('.accordion');
+
+accordions.forEach((item) => {
+    const accBtn = item.querySelector('.accordion-btn');
+    const accBody = item.querySelector('.accordion-body');
+    const accImgs = item.querySelectorAll('.accordion-btn__icon img');
+
+    accBtn.addEventListener('click', () => {
+        accBody.style.maxHeight = accBody.style.maxHeight ? null : accBody.scrollHeight + 'px';
+        item.classList.toggle('active');
+        if (item.classList.contains('active')) {
+            accImgs[0].classList.add('hidden');
+            accImgs[1].classList.remove('hidden');
+        } else {
+            accImgs[0].classList.remove('hidden');
+            accImgs[1].classList.add('hidden');
+        }
+    });
+});
